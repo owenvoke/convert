@@ -37,10 +37,10 @@ final class Bytes
         if ($unit) {
             // Find the position of the unit in the ordered string which is the power
             // of magnitude to multiply a kilobyte / kibibyte by.
-            return (int) round($size * (($iecFormat ? self::KIBIBYTE : self::KILOBYTE) ** stripos('bkmgtpezy', $unit[0])));
+            return (int) round((float) $size * (($iecFormat ? self::KIBIBYTE : self::KILOBYTE) ** stripos('bkmgtpezy', $unit[0])));
         }
 
-        return (int) round($size);
+        return (int) round((float) $size);
     }
 
     /**
