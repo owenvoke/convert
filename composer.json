@@ -1,0 +1,29 @@
+{
+    "name": "pxgamer/convert",
+    "type": "library",
+    "description": "A package for converting data.",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "pxgamer\\Convert\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "pxgamer\\Convert\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:dox": "@test --testdox"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
