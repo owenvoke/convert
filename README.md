@@ -19,7 +19,27 @@ $ composer require pxgamer/convert
 
 ## Usage
 
-...
+#### Byte Conversion
+
+**Convert from a string to bytes**
+
+```php
+use pxgamer\Convert\Bytes;
+
+// Metric standard format
+Bytes::toInt('1B');
+// IEC standard format
+Bytes::toInt('1GiB');
+```
+
+**Convert from bytes to a human-readable string**
+
+```php
+use pxgamer\Convert\Bytes;
+
+// This is always formatted as metric in the output
+Bytes::toString(1000);
+```
 
 ## Change log
 
