@@ -6,4 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## [Unreleased]
 
+## v1.0.0 - 2020-01-14
+
+### Added
+- Initial release
+
 [Unreleased]: https://github.com/pxgamer/convert/compare/v1.0.0...master
