@@ -10,6 +10,8 @@ class BytesTest extends TestCase
     /** @test */
     public function itCanConvertFromAHumanReadableStringToBytes(): void
     {
+        $this->assertEquals(100, Bytes::toInt('100'));
+
         $this->assertEquals(1, Bytes::toInt('1B'));
         $this->assertEquals(2, Bytes::toInt('2B'));
 
