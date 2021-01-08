@@ -4,27 +4,34 @@
     "description": "A package for converting data.",
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3 || ^8.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12.5",
-        "phpunit/phpunit": "^8.0"
+        "pestphp/pest": "^1.0",
+        "phpstan/phpstan": "^0.12.65",
+        "symfony/var-dumper": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "OwenVoke\\Convert\\": "src"
+            "OwenVoke\\Convert\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "OwenVoke\\Convert\\Tests\\": "tests"
+            "OwenVoke\\Convert\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "analyse": "phpstan analyse"
+        "test:types": "phpstan analyse --ansi --memory-limit=0",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:types",
+            "@test:unit"
+        ]
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
