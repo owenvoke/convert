@@ -2,8 +2,8 @@
 
 namespace OwenVoke\Convert\Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
 use OwenVoke\Convert\Bytes;
+use PHPUnit\Framework\TestCase;
 
 class BytesTest extends TestCase
 {
