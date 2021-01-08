@@ -21,7 +21,7 @@ it('can convert from a human-readable string to bytes', function () {
     expect(Bytes::toInt('1PiB', true))->toBe(1125899906842624);
 });
 
-it('can convert fromBytesToAHumanReadableString', function () {
+it('can convert from bytes to a human-readable string', function () {
     expect(Bytes::toString(1))->toBe('1 byte');
     expect(Bytes::toString(2))->toBe('2 bytes');
 
