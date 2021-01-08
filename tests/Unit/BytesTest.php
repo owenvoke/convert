@@ -1,9 +1,9 @@
 <?php
 
-namespace pxgamer\Convert\Tests\Unit;
+namespace OwenVoke\Convert\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use pxgamer\Convert\Bytes;
+use OwenVoke\Convert\Bytes;
 
 class BytesTest extends TestCase
 {

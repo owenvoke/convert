@@ -1,6 +1,6 @@
 <?php
 
-namespace pxgamer\Convert;
+namespace OwenVoke\Convert;
 
 final class Bytes
 {

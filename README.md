@@ -4,8 +4,8 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-github-actions]][link-github-actions]
 [![Style CI][ico-styleci]][link-styleci]
-[![Code Coverage][ico-code-coverage]][link-code-coverage]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![Buy us a tree][ico-treeware-gifting]][link-treeware-gifting]
 
 A package for converting data.
 
@@ -14,7 +14,7 @@ A package for converting data.
 Via Composer
 
 ```bash
-$ composer require pxgamer/convert
+$ composer require owenvoke/convert
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ $ composer require pxgamer/convert
 **Convert from a string to bytes**
 
 ```php
-use pxgamer\Convert\Bytes;
+use OwenVoke\Convert\Bytes;
 
 // Metric standard format
 Bytes::toInt('1B');
@@ -35,7 +35,7 @@ Bytes::toInt('1GiB');
 **Convert from bytes to a human-readable string**
 
 ```php
-use pxgamer\Convert\Bytes;
+use OwenVoke\Convert\Bytes;
 
 // This is always formatted as metric in the output
 Bytes::toString(1000);
@@ -53,32 +53,43 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](.github/CODE_OF_CONDUCT.md) for details.
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email security@pxgamer.xyz instead of using the issue tracker.
+If you discover any security related issues, please email security@voke.dev instead of using the issue tracker.
 
 ## Credits
 
-- [pxgamer][link-author]
+- [Owen Voke][link-author]
 - [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/pxgamer/convert.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-github-actions]: https://img.shields.io/github/workflow/status/pxgamer/convert/Continuous%20Integration.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/233832615/shield
-[ico-code-coverage]: https://img.shields.io/codecov/c/github/pxgamer/convert.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/pxgamer/convert.svg?style=flat-square
+## Treeware
 
-[link-packagist]: https://packagist.org/packages/pxgamer/convert
-[link-github-actions]: https://github.com/pxgamer/convert/actions
+You're free to use this package, but if it makes it to your production environment you are required to buy the world a tree.
+
+It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to plant trees. If you support this package and contribute to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+
+You can buy trees [here][link-treeware-gifting].
+
+Read more about Treeware at [treeware.earth][link-treeware].
+
+[ico-version]: https://img.shields.io/packagist/v/owenvoke/convert.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-github-actions]: https://img.shields.io/github/workflow/status/owenvoke/convert/Tests.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/233832615/shield
+[ico-downloads]: https://img.shields.io/packagist/dt/owenvoke/convert.svg?style=flat-square
+[ico-treeware-gifting]: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/owenvoke/convert
+[link-github-actions]: https://github.com/owenvoke/convert/actions
 [link-styleci]: https://styleci.io/repos/233832615
-[link-code-coverage]: https://codecov.io/gh/pxgamer/convert
-[link-downloads]: https://packagist.org/packages/pxgamer/convert
-[link-author]: https://github.com/pxgamer
+[link-downloads]: https://packagist.org/packages/owenvoke/convert
+[link-treeware]: https://treeware.earth
+[link-treeware-gifting]: https://ecologi.com/owenvoke?gift-trees
+[link-author]: https://github.com/owenvoke
 [link-contributors]: ../../contributors
