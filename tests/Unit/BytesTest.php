@@ -1,45 +1,35 @@
 <?php
 
-namespace OwenVoke\Convert\Tests\Unit;
-
 use OwenVoke\Convert\Bytes;
-use PHPUnit\Framework\TestCase;
 
-class BytesTest extends TestCase
-{
-    /** @test */
-    public function itCanConvertFromAHumanReadableStringToBytes(): void
-    {
-        $this->assertEquals(100, Bytes::toInt('100'));
+it('can convert from a human-readable string to bytes', function () {
+    expect(Bytes::toInt('100'))->toBe(100);
 
-        $this->assertEquals(1, Bytes::toInt('1B'));
-        $this->assertEquals(2, Bytes::toInt('2B'));
+    expect(Bytes::toInt('1B'))->toBe(1);
+    expect(Bytes::toInt('2B'))->toBe(2);
 
-        $this->assertEquals(1000, Bytes::toInt('1KB'));
-        $this->assertEquals(1000000, Bytes::toInt('1MB'));
-        $this->assertEquals(1000000000, Bytes::toInt('1GB'));
-        $this->assertEquals(1000000000000, Bytes::toInt('1TB'));
-        $this->assertEquals(1000000000000000, Bytes::toInt('1PB'));
+    expect(Bytes::toInt('1KB'))->toBe(1000);
+    expect(Bytes::toInt('1MB'))->toBe(1000000);
+    expect(Bytes::toInt('1GB'))->toBe(1000000000);
+    expect(Bytes::toInt('1TB'))->toBe(1000000000000);
+    expect(Bytes::toInt('1PB'))->toBe(1000000000000000);
 
-        $this->assertEquals(1024, Bytes::toInt('1KiB', true));
-        $this->assertEquals(1048576, Bytes::toInt('1MiB', true));
-        $this->assertEquals(1073741824, Bytes::toInt('1GiB', true));
-        $this->assertEquals(1099511627776, Bytes::toInt('1TiB', true));
-        $this->assertEquals(1125899906842624, Bytes::toInt('1PiB', true));
-    }
+    expect(Bytes::toInt('1KiB', true))->toBe(1024);
+    expect(Bytes::toInt('1MiB', true))->toBe(1048576);
+    expect(Bytes::toInt('1GiB', true))->toBe(1073741824);
+    expect(Bytes::toInt('1TiB', true))->toBe(1099511627776);
+    expect(Bytes::toInt('1PiB', true))->toBe(1125899906842624);
+});
 
-    /** @test */
-    public function itCanConvertFromBytesToAHumanReadableString(): void
-    {
-        $this->assertEquals('1 byte', Bytes::toString(1));
-        $this->assertEquals('2 bytes', Bytes::toString(2));
+it('can convert fromBytesToAHumanReadableString', function () {
+    expect(Bytes::toString(1))->toBe('1 byte');
+    expect(Bytes::toString(2))->toBe('2 bytes');
 
-        $this->assertEquals('1 KB', Bytes::toString(1000));
-        $this->assertEquals('1 MB', Bytes::toString(1000000));
-        $this->assertEquals('1 GB', Bytes::toString(1000000000));
-        $this->assertEquals('1 TB', Bytes::toString(1000000000000));
-        $this->assertEquals('1 PB', Bytes::toString(1000000000000000));
+    expect(Bytes::toString(1000))->toBe('1 KB');
+    expect(Bytes::toString(1000000))->toBe('1 MB');
+    expect(Bytes::toString(1000000000))->toBe('1 GB');
+    expect(Bytes::toString(1000000000000))->toBe('1 TB');
+    expect(Bytes::toString(1000000000000000))->toBe('1 PB');
 
-        $this->assertEquals('3.21 KB', Bytes::toString(3210));
-    }
-}
+    expect(Bytes::toString(3210))->toBe('3.21 KB');
+});
